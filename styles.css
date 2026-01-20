@@ -99,6 +99,9 @@ body {
   border-radius: var(--radius-md);
   white-space: nowrap;
   position: relative;
+  width: 270px;
+  /* Fixed width on desktop to preventANY jumping */
+  justify-content: center;
 }
 
 /* Button States */
@@ -118,20 +121,34 @@ body {
   height: 24px;
 }
 
+/* Maintain layout flow by hiding but keeping size */
 .btn-submit.loading .btn-text {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
 }
 
 .btn-submit.loading .btn-spinner {
   display: block;
+  position: absolute;
+  /* Center absolutely since text holds the dimensions */
+  top: 50%;
+  left: 50%;
+  margin-top: -10px;
+  margin-left: -10px;
 }
 
 .btn-submit.success .btn-text {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
 }
 
 .btn-submit.success .btn-check {
   display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -12px;
+  margin-left: -12px;
 }
 
 .btn-submit.success {
@@ -190,9 +207,8 @@ body {
   font-size: 64px;
   font-weight: 600;
   color: var(--color-text-dark);
-  letter-spacing: -0.64px;
-  line-height: 1.1;
-  margin-bottom: 16px;
+  line-height: 1.2;
+  margin-bottom: 24px;
   opacity: 0;
   animation: fadeUp 500ms cubic-bezier(0.25, 0, 0, 1) forwards;
   animation-delay: 100ms;
@@ -202,7 +218,6 @@ body {
   font-size: 28px;
   font-weight: 400;
   color: var(--color-text-muted);
-  letter-spacing: -0.28px;
   max-width: 800px;
   line-height: 1.4;
   margin-bottom: 44px;
@@ -316,9 +331,9 @@ body {
 .whitepaper-headline {
   font-size: 48px;
   font-weight: 700;
-  color: var(--color-text-dark);
-  letter-spacing: -0.48px;
-  line-height: 1.15;
+  color: white;
+  margin-bottom: 16px;
+  line-height: 1.2;
 }
 
 .whitepaper-subhead {
@@ -422,11 +437,10 @@ body {
 .section-headline {
   font-size: 48px;
   font-weight: 600;
-  letter-spacing: -1.5px;
   margin: 0 auto 60px;
   /* Centered with reduced bottom gap */
   max-width: 800px;
-  line-height: 1.1;
+  line-height: 1.2;
   text-align: center;
 }
 
@@ -473,7 +487,6 @@ body {
   /* Lighter weight for elegance at scale */
   color: var(--color-primary);
   opacity: 0.9;
-  letter-spacing: -4px;
   line-height: 0.9;
   margin-left: -4px;
   /* Optical alignment */
@@ -501,14 +514,14 @@ body {
 .solution-steps {
   display: flex;
   flex-direction: column;
-  gap: 0;
+  gap: 40px;
   /* Cards will be joined by borders */
   margin-top: 80px;
 }
 
 .step-card {
   display: flex;
-  gap: 40px;
+  gap: 0px;
   padding: 60px 0;
   border-bottom: 1px solid var(--color-border);
   align-items: flex-start;
@@ -516,8 +529,9 @@ body {
   /* Ensure horizontal flex within card */
 }
 
-.step-card:first-child {
-  border-top: 1px solid var(--color-border);
+/* Border logic: Only between items */
+.step-card:last-child {
+  border-bottom: none;
 }
 
 .step-number {
@@ -533,13 +547,12 @@ body {
   font-size: 32px;
   font-weight: 600;
   margin-bottom: 16px;
-  letter-spacing: -0.64px;
 }
 
 .step-text {
   font-size: 20px;
   color: var(--color-text-muted);
-  line-height: 1.6;
+  line-height: 1.3;
   max-width: 600px;
 }
 
@@ -645,7 +658,7 @@ body {
 
   .hero {
     padding: 56px 40px 60px;
-    gap: 60px;
+    gap: 36px;
   }
 
   .hero-headline {
@@ -672,17 +685,29 @@ body {
   }
 
   .hero-logo {
-    font-size: 24px;
+    font-size: 28px;
     margin-bottom: 24px;
   }
 
   .hero {
     padding: 40px 24px 40px;
-    gap: 40px;
+    /* Removed gap as we use margins now */
+  }
+
+  .hero-content {
+    margin-bottom: 24px;
+    /* Reduced from 60px */
+  }
+
+  .hero-image {
+    margin-bottom: 8px;
+    /* Badges very close */
   }
 
   .hero-headline {
     font-size: 32px;
+    margin-bottom: 12px;
+    /* Tighter to subhead */
   }
 
   .hero-subhead {
@@ -714,5 +739,124 @@ body {
   .badge-icon {
     width: 20px;
     height: 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+    /* Stack stats on tablet/mobile */
+    gap: 0;
+  }
+
+  .stat-card {
+    border-top: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 32px 24px;
+    /* Added horizontal padding */
+    min-height: auto;
+    /* Remove fixed height to close gap */
+    gap: 16px;
+    /* Reduce gap between number and text */
+  }
+
+  .stat-card:last-child {
+    border-bottom: none;
+  }
+
+  .stats-section {
+    padding: 80px 24px;
+  }
+
+  .stat-number {
+    font-size: 48px;
+    /* Reduced from 56px */
+  }
+
+  .section-headline {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+
+  /* Solution Mobile Fixes */
+  .solution-section {
+    padding: 60px 24px;
+    /* Reduced padding */
+  }
+
+  .solution-steps {
+    margin-top: 40px;
+    /* Reduced from 80px */
+    gap: 0;
+    /* Reset gap to rely on padding */
+  }
+
+  .step-card {
+    flex-direction: column;
+    /* Stack number and content */
+    gap: 16px;
+    padding: 32px 0;
+    /* Reduced from 40px */
+  }
+
+  .step-number {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+
+  .step-title {
+    font-size: 24px;
+  }
+
+  .step-text {
+    font-size: 18px;
+  }
+
+  /* Footer Mobile Fixes */
+  .footer-container.footer-simple {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 32px;
+    /* Gap between ordered items */
+  }
+
+  /* Unwrap the groups so we can reorder children directly */
+  .footer-left,
+  .footer-right {
+    display: contents;
+  }
+
+  .logo {
+    order: 1;
+  }
+
+  /* Links come second */
+  .footer-link {
+    order: 2;
+    font-size: 18px;
+  }
+
+  /* Copyright moves to the very bottom */
+  .copyright {
+    order: 3;
+    margin-top: 16px;
+  }
+
+
+  /* Whitepaper Form Mobile Fixes */
+  .whitepaper-form {
+    flex-direction: column;
+  }
+
+  .whitepaper-input {
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .whitepaper-btn {
+    width: 100%;
+    font-size: 18px;
   }
 }
