@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Synthetix Data — Mathematically Private Synthetic Healthcare Data</title>
+  <meta name="description"
+    content="Generate HIPAA-compliant synthetic data in hours. Backed by ε-differential privacy with provable privacy guarantees.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Header -->
+  <!-- <header class="header">
+    <a href="/" class="logo">
+      <span class="logo-bold">Synthetix</span> <span class="logo-regular">Data</span>
+    </a>
+    <a href="#" class="btn btn-primary btn-header" id="whitepaper-btn">Download Whitepaper</a>
+  </header> -->
+
+  <!-- Hero Section -->
+  <main class="hero">
+    <div class="hero-content">
+      <div class="hero-logo">
+        <span class="logo-bold">synthetix</span>
+      </div>
+      <h1 class="hero-headline">
+        Mathematically Private<br>
+        Synthetic Healthcare Data
+      </h1>
+      <p class="hero-subhead">
+        Generate HIPAA-compliant synthetic data in hours. Backed by ε-differential privacy with provable privacy
+        guarantees.
+      </p>
+
+      <!-- Email Capture Form -->
+      <form class="email-form" id="email-form">
+        <input type="email" class="email-input" placeholder="Work Email" id="email-input" required>
+        <button type="submit" class="btn btn-primary btn-submit" id="submit-btn">
+          <span class="btn-text">Request Whitepaper</span>
+          <span class="btn-spinner"></span>
+          <svg class="btn-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        </button>
+      </form>
+    </div>
+
+    <!-- Hero Image -->
+    <div class="hero-image">
+      <img src="hero-graph.png"
+        alt="Age distribution retention in synthetic cardiac dataset with differential privacy noise">
+    </div>
+
+    <!-- Trust Badges -->
+    <div class="trust-badges">
+      <div class="badge">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+          class="badge-icon">
+          <path
+            d="M20.0017 10.0008C20.0017 8.5875 19.285 7.34167 18.195 6.60667C18.4458 5.31667 18.0717 3.92917 17.0725 2.92917C16.0733 1.93 14.6858 1.55583 13.395 1.80667C12.66 0.716667 11.4142 0 10.0008 0C8.5875 0 7.34167 0.716667 6.60667 1.80667C5.31667 1.55583 3.92833 1.93 2.92917 2.92917C1.93 3.92833 1.55583 5.31583 1.80667 6.60667C0.716667 7.34167 0 8.5875 0 10.0008C0 11.4142 0.716667 12.66 1.80667 13.395C1.55583 14.685 1.93 16.0733 2.92917 17.0725C3.92833 18.0717 5.31583 18.4458 6.60667 18.195C7.34167 19.285 8.5875 20.0017 10.0008 20.0017C11.4142 20.0017 12.66 19.285 13.395 18.195C14.685 18.4458 16.0733 18.0717 17.0725 17.0725C18.0717 16.0733 18.4458 14.6858 18.195 13.395C19.285 12.66 20.0017 11.4142 20.0017 10.0008ZM9.92583 12.85C9.60333 13.1725 9.17917 13.3333 8.75333 13.3333C8.3275 13.3333 7.89917 13.1708 7.57333 12.8458L5.85391 11.1796C5.52316 10.859 5.51491 10.3311 5.83549 10.0003C6.15601 9.6697 6.68389 9.66147 7.01456 9.98196L8.42556 11.3495C8.60233 11.5208 8.88348 11.52 9.05918 11.3475L12.9899 7.48989C13.3183 7.1676 13.8456 7.17203 14.1686 7.49979C14.492 7.82804 14.488 8.35633 14.1597 8.6797L9.92583 12.85Z"
+            fill="#02A1A4" />
+        </svg>
+        <span>HIPAA Compliant</span>
+      </div>
+      <div class="badge">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+          class="badge-icon">
+          <path
+            d="M20.0017 10.0008C20.0017 8.5875 19.285 7.34167 18.195 6.60667C18.4458 5.31667 18.0717 3.92917 17.0725 2.92917C16.0733 1.93 14.6858 1.55583 13.395 1.80667C12.66 0.716667 11.4142 0 10.0008 0C8.5875 0 7.34167 0.716667 6.60667 1.80667C5.31667 1.55583 3.92833 1.93 2.92917 2.92917C1.93 3.92833 1.55583 5.31583 1.80667 6.60667C0.716667 7.34167 0 8.5875 0 10.0008C0 11.4142 0.716667 12.66 1.80667 13.395C1.55583 14.685 1.93 16.0733 2.92917 17.0725C3.92833 18.0717 5.31583 18.4458 6.60667 18.195C7.34167 19.285 8.5875 20.0017 10.0008 20.0017C11.4142 20.0017 12.66 19.285 13.395 18.195C14.685 18.4458 16.0733 18.0717 17.0725 17.0725C18.0717 16.0733 18.4458 14.6858 18.195 13.395C19.285 12.66 20.0017 11.4142 20.0017 10.0008ZM9.92583 12.85C9.60333 13.1725 9.17917 13.3333 8.75333 13.3333C8.3275 13.3333 7.89917 13.1708 7.57333 12.8458L5.85391 11.1796C5.52316 10.859 5.51491 10.3311 5.83549 10.0003C6.15601 9.6697 6.68389 9.66147 7.01456 9.98196L8.42556 11.3495C8.60233 11.5208 8.88348 11.52 9.05918 11.3475L12.9899 7.48989C13.3183 7.1676 13.8456 7.17203 14.1686 7.49979C14.492 7.82804 14.488 8.35633 14.1597 8.6797L9.92583 12.85Z"
+            fill="#02A1A4" />
+        </svg>
+        <span>SOC 2 Type II</span>
+      </div>
+      <div class="badge">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+          class="badge-icon">
+          <path
+            d="M20.0017 10.0008C20.0017 8.5875 19.285 7.34167 18.195 6.60667C18.4458 5.31667 18.0717 3.92917 17.0725 2.92917C16.0733 1.93 14.6858 1.55583 13.395 1.80667C12.66 0.716667 11.4142 0 10.0008 0C8.5875 0 7.34167 0.716667 6.60667 1.80667C5.31667 1.55583 3.92833 1.93 2.92917 2.92917C1.93 3.92833 1.55583 5.31583 1.80667 6.60667C0.716667 7.34167 0 8.5875 0 10.0008C0 11.4142 0.716667 12.66 1.80667 13.395C1.55583 14.685 1.93 16.0733 2.92917 17.0725C3.92833 18.0717 5.31583 18.4458 6.60667 18.195C7.34167 19.285 8.5875 20.0017 10.0008 20.0017C11.4142 20.0017 12.66 19.285 13.395 18.195C14.685 18.4458 16.0733 18.0717 17.0725 17.0725C18.0717 16.0733 18.4458 14.6858 18.195 13.395C19.285 12.66 20.0017 11.4142 20.0017 10.0008ZM9.92583 12.85C9.60333 13.1725 9.17917 13.3333 8.75333 13.3333C8.3275 13.3333 7.89917 13.1708 7.57333 12.8458L5.85391 11.1796C5.52316 10.859 5.51491 10.3311 5.83549 10.0003C6.15601 9.6697 6.68389 9.66147 7.01456 9.98196L8.42556 11.3495C8.60233 11.5208 8.88348 11.52 9.05918 11.3475L12.9899 7.48989C13.3183 7.1676 13.8456 7.17203 14.1686 7.49979C14.492 7.82804 14.488 8.35633 14.1597 8.6797L9.92583 12.85Z"
+            fill="#02A1A4" />
+        </svg>
+        <span>FHIR R4 Native</span>
+      </div>
+      <div class="badge">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+          class="badge-icon">
+          <path
+            d="M20.0017 10.0008C20.0017 8.5875 19.285 7.34167 18.195 6.60667C18.4458 5.31667 18.0717 3.92917 17.0725 2.92917C16.0733 1.93 14.6858 1.55583 13.395 1.80667C12.66 0.716667 11.4142 0 10.0008 0C8.5875 0 7.34167 0.716667 6.60667 1.80667C5.31667 1.55583 3.92833 1.93 2.92917 2.92917C1.93 3.92833 1.55583 5.31583 1.80667 6.60667C0.716667 7.34167 0 8.5875 0 10.0008C0 11.4142 0.716667 12.66 1.80667 13.395C1.55583 14.685 1.93 16.0733 2.92917 17.0725C3.92833 18.0717 5.31583 18.4458 6.60667 18.195C7.34167 19.285 8.5875 20.0017 10.0008 20.0017C11.4142 20.0017 12.66 19.285 13.395 18.195C14.685 18.4458 16.0733 18.0717 17.0725 17.0725C18.0717 16.0733 18.4458 14.6858 18.195 13.395C19.285 12.66 20.0017 11.4142 20.0017 10.0008ZM9.92583 12.85C9.60333 13.1725 9.17917 13.3333 8.75333 13.3333C8.3275 13.3333 7.89917 13.1708 7.57333 12.8458L5.85391 11.1796C5.52316 10.859 5.51491 10.3311 5.83549 10.0003C6.15601 9.6697 6.68389 9.66147 7.01456 9.98196L8.42556 11.3495C8.60233 11.5208 8.88348 11.52 9.05918 11.3475L12.9899 7.48989C13.3183 7.1676 13.8456 7.17203 14.1686 7.49979C14.492 7.82804 14.488 8.35633 14.1597 8.6797L9.92583 12.85Z"
+            fill="#02A1A4" />
+        </svg>
+        <span>FDA Ready</span>
+      </div>
+    </div>
+  </main>
+
+  <!-- Whitepaper Section -->
+  <!-- <section class="whitepaper-section">
+    <div class="whitepaper-content">
+      <span class="whitepaper-badge">FREE WHITEPAPER</span>
+      <h2 class="whitepaper-headline">
+        The Healthcare AI Executive's<br>
+        Guide to Synthetic Data
+      </h2>
+      <p class="whitepaper-subhead">
+        Learn how leading health systems are accelerating AI development while ensuring patient privacy and regulatory
+        compliance.
+      </p>
+      <form class="whitepaper-form" id="whitepaper-form">
+        <input type="email" class="whitepaper-input" placeholder="Work email" id="whitepaper-email" required>
+        <button type="submit" class="btn btn-primary btn-whitepaper" id="whitepaper-submit-btn">
+          <span class="btn-text">Download Whitepaper</span>
+          <span class="btn-spinner"></span>
+          <svg class="btn-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </section> -->
+
+  <!-- Problem/Stats Section -->
+  <section class="stats-section">
+    <div class="stats-container">
+      <h2 class="section-headline light">The High Cost of Data Friction</h2>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number">$360B</div>
+          <div class="stat-label">Unrealized annual savings</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">18 mo</div>
+          <div class="stat-label">Avg. data sharing delay</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">60%</div>
+          <div class="stat-label">AI projects fail due to data access</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solution/How It Works Section -->
+  <section class="solution-section">
+    <div class="solution-container">
+      <h2 class="section-headline">Engineered for Enterprise Healthcare</h2>
+
+      <div class="solution-steps">
+        <div class="step-card">
+          <div class="step-number">01</div>
+          <div class="step-content">
+            <h3 class="step-title">Accelerate AI without privacy risk</h3>
+            <p class="step-text">Deploy machine learning models faster with synthetic data that maintains statistical
+              accuracy while ensuring mathematical privacy guarantees.</p>
+          </div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">02</div>
+          <div class="step-content">
+            <h3 class="step-title">Enable collaboration at scale</h3>
+            <p class="step-text">Share data across departments, with research partners, and vendors—without exposing
+              real patient information or triggering compliance reviews.</p>
+          </div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">03</div>
+          <div class="step-content">
+            <h3 class="step-title">Meet regulatory requirements</h3>
+            <p class="step-text">Built for healthcare compliance from day one. HIPAA-aligned with audit-ready
+              documentation that satisfies the most stringent security requirements.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container footer-simple">
+      <div class="footer-left">
+        <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;" class="logo">
+          <span class="logo-bold">synthetix</span>
+        </a>
+        <p class="copyright">&copy; 2026 Synthetix Data</p>
+      </div>
+
+      <div class="footer-right">
+        <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;" class="footer-link">Download
+          Whitepaper</a>
+        <a href="mailto:hello@synthetixdata.ai" class="footer-link">hello@synthetixdata.ai</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

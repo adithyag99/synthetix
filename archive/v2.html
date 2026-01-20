@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Synthetix Data — Mathematically Private Synthetic Healthcare Data</title>
+  <meta name="description"
+    content="Generate HIPAA-compliant synthetic data in hours. Backed by ε-differential privacy with provable privacy guarantees.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles-v2.css">
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <a href="/" class="logo">
+      <span class="logo-bold">Synthetix</span> <span class="logo-regular">Data</span>
+    </a>
+    <a href="#" class="btn btn-primary btn-header" id="whitepaper-btn">Download Whitepaper</a>
+  </header>
+
+  <!-- Hero Section -->
+  <main class="hero">
+    <div class="hero-content">
+      <h1 class="hero-headline">
+        Mathematically Private<br>
+        Synthetic Healthcare Data
+      </h1>
+      <p class="hero-subhead">
+        Generate HIPAA-compliant synthetic data in hours. Backed by ε-differential privacy with provable privacy
+        guarantees.
+      </p>
+
+      <!-- Email Capture Form -->
+      <form class="email-form" id="email-form">
+        <input type="email" class="email-input" placeholder="Work Email" id="email-input" required>
+        <button type="submit" class="btn btn-primary btn-submit" id="submit-btn">
+          <span class="btn-text">Request Access</span>
+          <span class="btn-spinner"></span>
+          <svg class="btn-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        </button>
+      </form>
+    </div>
+
+    <!-- Hero Image -->
+    <div class="hero-image">
+      <img src="hero-graph.png"
+        alt="Age distribution retention in synthetic cardiac dataset with differential privacy noise">
+    </div>
+
+    <!-- Trust Badges -->
+    <div class="trust-badges">
+      <div class="badge">
+        <svg class="badge-icon" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+        </svg>
+        <span>HIPAA Compliant</span>
+      </div>
+      <div class="badge">
+        <svg class="badge-icon" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+        </svg>
+        <span>SOC 2 Type II</span>
+      </div>
+      <div class="badge">
+        <svg class="badge-icon" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+        </svg>
+        <span>FHIR R4 Native</span>
+      </div>
+      <div class="badge">
+        <svg class="badge-icon" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+        </svg>
+        <span>FDA Ready</span>
+      </div>
+    </div>
+  </main>
+
+  <!-- Whitepaper Section -->
+  <section class="whitepaper-section">
+    <div class="whitepaper-content">
+      <span class="whitepaper-badge">FREE WHITEPAPER</span>
+      <h2 class="whitepaper-headline">
+        The Healthcare AI Executive's<br>
+        Guide to Synthetic Data
+      </h2>
+      <p class="whitepaper-subhead">
+        Learn how leading health systems are accelerating AI development while ensuring patient privacy and regulatory
+        compliance.
+      </p>
+      <form class="whitepaper-form" id="whitepaper-form">
+        <input type="email" class="whitepaper-input" placeholder="Work email" id="whitepaper-email" required>
+        <button type="submit" class="btn btn-primary btn-whitepaper" id="whitepaper-submit-btn">
+          <span class="btn-text">Download Whitepaper</span>
+          <span class="btn-spinner"></span>
+          <svg class="btn-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
