@@ -643,7 +643,7 @@ body {
   color: var(--color-text-muted);
   text-align: center;
   max-width: 600px;
-  margin: 0 auto 32px;
+  margin: 0 auto 8px;
 }
 
 /* ===== Stats Section ===== */
@@ -1606,7 +1606,7 @@ body {
 
   .section-subtitle {
     font-size: 17px;
-    margin-bottom: 24px;
+    margin-bottom: 8px;
   }
 
   .comparison-header,
