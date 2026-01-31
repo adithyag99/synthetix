@@ -68,7 +68,16 @@ function setupForm(formId, emailId, submitId) {
     e.preventDefault();
 
     const email = emailInput.value.trim();
-    if (!email) return;
+
+    // Validate on submit
+    if (!emailInput.validity.valid || !email) {
+      emailInput.style.borderColor = 'var(--color-error)';
+      // Clear error as soon as they start typing again
+      emailInput.addEventListener('input', () => {
+        emailInput.style.borderColor = '';
+      }, { once: true });
+      return;
+    }
 
     // Show loading state
     submitBtn.classList.add('loading');
@@ -110,23 +119,6 @@ function setupForm(formId, emailId, submitId) {
       setTimeout(() => {
         emailInput.style.borderColor = '';
       }, 2000);
-    }
-  });
-
-  // Real-time validation feedback
-  emailInput.addEventListener('input', () => {
-    if (emailInput.validity.valid && emailInput.value.length > 0) {
-      emailInput.style.borderColor = 'var(--color-success)';
-    } else if (emailInput.value.length > 0) {
-      emailInput.style.borderColor = 'var(--color-error)';
-    } else {
-      emailInput.style.borderColor = '';
-    }
-  });
-
-  emailInput.addEventListener('blur', () => {
-    if (emailInput.value.length === 0) {
-      emailInput.style.borderColor = '';
     }
   });
 }

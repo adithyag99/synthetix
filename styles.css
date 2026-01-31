@@ -240,18 +240,32 @@ body {
 }
 
 .btn-primary.loading .btn-text,
-.btn-primary.success .btn-text {
-  visibility: hidden;
+.btn-primary.success .btn-text,
+.btn-primary.loading svg:not(.btn-spinner),
+.btn-primary.success svg:not(.btn-check) {
+  display: none;
 }
 
 .btn-primary.loading .btn-spinner {
   display: block;
   position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -11px;
+  /* half of 22px */
+  margin-left: -11px;
+  /* half of 22px */
 }
 
 .btn-primary.success .btn-check {
   display: block;
   position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -12px;
+  /* half of 24px */
+  margin-left: -12px;
+  /* half of 24px */
 }
 
 .btn-primary.success {
@@ -404,13 +418,7 @@ body {
   box-shadow: 0 0 0 4px rgba(2, 161, 164, 0.1);
 }
 
-.email-input:invalid:not(:placeholder-shown) {
-  border-color: var(--color-error);
-}
 
-.email-input:valid:not(:placeholder-shown) {
-  border-color: var(--color-success);
-}
 
 .form-validation {
   position: absolute;
