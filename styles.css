@@ -814,7 +814,7 @@ body {
 /* ===== Comparison Section ===== */
 .comparison-section {
   background: var(--color-bg);
-  padding: 140px 24px 72px;
+  padding: 140px 24px 84px;
 }
 
 .comparison-table {
@@ -1009,7 +1009,7 @@ body {
 /* ===== Whitepaper Section ===== */
 .whitepaper-section {
   background: var(--color-bg);
-  padding: 72px 24px 140px;
+  padding: 84px 24px 140px;
 }
 
 .whitepaper-content {
@@ -1597,11 +1597,11 @@ body {
   }
 
   .comparison-section {
-    padding: 80px 20px 52px;
+    padding: 80px 20px 64px;
   }
 
   .whitepaper-section {
-    padding: 52px 20px 80px;
+    padding: 64px 20px 80px;
   }
 
   .section-subtitle {
