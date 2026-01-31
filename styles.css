@@ -111,9 +111,7 @@ body {
   transform: translateX(-50%) translateY(0);
 }
 
-.nav:hover {
-  box-shadow: var(--shadow-xl);
-}
+
 
 .nav-logo {
   font-size: 22px;
@@ -645,7 +643,7 @@ body {
   color: var(--color-text-muted);
   text-align: center;
   max-width: 600px;
-  margin: 0 auto 60px;
+  margin: 0 auto 32px;
 }
 
 /* ===== Stats Section ===== */
@@ -816,7 +814,7 @@ body {
 /* ===== Comparison Section ===== */
 .comparison-section {
   background: var(--color-bg);
-  padding: 140px 24px;
+  padding: 140px 24px 60px;
 }
 
 .comparison-table {
@@ -1011,7 +1009,7 @@ body {
 /* ===== Whitepaper Section ===== */
 .whitepaper-section {
   background: var(--color-bg);
-  padding: 140px 24px;
+  padding: 60px 24px 140px;
 }
 
 .whitepaper-content {
@@ -1577,7 +1575,8 @@ body {
   }
 
   .data-viz {
-    max-width: 300px;
+    max-width: 100%;
+    width: 100%;
   }
 
   .trust-badges {
@@ -1591,17 +1590,23 @@ body {
 
   .stats-section,
   .solution-section,
-  .comparison-section,
   .usecases-section,
-  .whitepaper-section,
   .credibility-section,
   .final-cta-section {
     padding: 80px 20px;
   }
 
+  .comparison-section {
+    padding: 80px 20px 40px;
+  }
+
+  .whitepaper-section {
+    padding: 40px 20px 80px;
+  }
+
   .section-subtitle {
     font-size: 17px;
-    margin-bottom: 40px;
+    margin-bottom: 24px;
   }
 
   .comparison-header,
