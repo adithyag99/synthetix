@@ -15,186 +15,524 @@
 </head>
 
 <body>
-  <!-- Header -->
-  <!-- <header class="header">
-    <a href="/" class="logo">
-      <span class="logo-bold">Synthetix</span> <span class="logo-regular">Data</span>
-    </a>
-    <a href="#" class="btn btn-primary btn-header" id="whitepaper-btn">Download Whitepaper</a>
-  </header> -->
+  <!-- Floating Navigation -->
+  <nav class="nav">
+    <a href="javascript:void(0)" class="nav-logo" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">synthetix</a>
+    <button class="nav-cta" onclick="document.getElementById('final-cta').scrollIntoView({ behavior: 'smooth' })">
+      Get Whitepaper
+    </button>
+  </nav>
 
   <!-- Hero Section -->
-  <main class="hero">
+  <section class="hero">
+    <div class="hero-bg">
+      <div class="hero-gradient"></div>
+      <div class="hero-mesh"></div>
+    </div>
+
     <div class="hero-content">
-      <div class="hero-logo">
-        <span class="logo-bold">synthetix</span>
-      </div>
-      <h1 class="hero-headline">
+      <div class="hero-logo animate-on-scroll">synthetix</div>
+      <h1 class="hero-headline animate-on-scroll">
         Mathematically Private<br>
-        Synthetic Healthcare Data
+        <span class="gradient-text" style="display: inline-block;">Synthetic Healthcare Data</span>
       </h1>
-      <p class="hero-subhead">
-        Generate HIPAA-compliant synthetic data in hours. Backed by ε-differential privacy with provable privacy
-        guarantees.
+      <p class="hero-subhead animate-on-scroll">
+        Generate HIPAA-compliant synthetic data in hours. Backed by<br>
+        ε-differential privacy with provable privacy guarantees.
       </p>
 
-      <!-- Email Capture Form -->
-      <form class="email-form" id="email-form">
-        <input type="email" class="email-input" placeholder="Work Email" id="email-input" required>
-        <button type="submit" class="btn btn-primary btn-submit" id="submit-btn">
+      <!-- Email Form 1 -->
+      <form class="email-form animate-on-scroll" id="hero-form">
+        <div class="form-wrapper">
+          <input type="email" class="email-input" placeholder="Enter your work email" id="hero-email" required>
+          <span class="form-validation"></span>
+        </div>
+        <button type="submit" class="btn-primary" id="hero-submit">
           <span class="btn-text">Request Whitepaper</span>
           <span class="btn-spinner"></span>
           <svg class="btn-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
             <polyline points="20 6 9 17 4 12"></polyline>
           </svg>
-        </button>
-      </form>
-    </div>
-
-    <!-- Hero Image -->
-    <div class="hero-image">
-      <img src="hero-graph.png"
-        alt="Age distribution retention in synthetic cardiac dataset with differential privacy noise">
-    </div>
-
-    <!-- Trust Badges -->
-    <div class="trust-badges">
-      <div class="badge">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
-          class="badge-icon">
-          <path
-            d="M20.0017 10.0008C20.0017 8.5875 19.285 7.34167 18.195 6.60667C18.4458 5.31667 18.0717 3.92917 17.0725 2.92917C16.0733 1.93 14.6858 1.55583 13.395 1.80667C12.66 0.716667 11.4142 0 10.0008 0C8.5875 0 7.34167 0.716667 6.60667 1.80667C5.31667 1.55583 3.92833 1.93 2.92917 2.92917C1.93 3.92833 1.55583 5.31583 1.80667 6.60667C0.716667 7.34167 0 8.5875 0 10.0008C0 11.4142 0.716667 12.66 1.80667 13.395C1.55583 14.685 1.93 16.0733 2.92917 17.0725C3.92833 18.0717 5.31583 18.4458 6.60667 18.195C7.34167 19.285 8.5875 20.0017 10.0008 20.0017C11.4142 20.0017 12.66 19.285 13.395 18.195C14.685 18.4458 16.0733 18.0717 17.0725 17.0725C18.0717 16.0733 18.4458 14.6858 18.195 13.395C19.285 12.66 20.0017 11.4142 20.0017 10.0008ZM9.92583 12.85C9.60333 13.1725 9.17917 13.3333 8.75333 13.3333C8.3275 13.3333 7.89917 13.1708 7.57333 12.8458L5.85391 11.1796C5.52316 10.859 5.51491 10.3311 5.83549 10.0003C6.15601 9.6697 6.68389 9.66147 7.01456 9.98196L8.42556 11.3495C8.60233 11.5208 8.88348 11.52 9.05918 11.3475L12.9899 7.48989C13.3183 7.1676 13.8456 7.17203 14.1686 7.49979C14.492 7.82804 14.488 8.35633 14.1597 8.6797L9.92583 12.85Z"
-            fill="#02A1A4" />
-        </svg>
-        <span>HIPAA Compliant</span>
-      </div>
-      <div class="badge">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
-          class="badge-icon">
-          <path
-            d="M20.0017 10.0008C20.0017 8.5875 19.285 7.34167 18.195 6.60667C18.4458 5.31667 18.0717 3.92917 17.0725 2.92917C16.0733 1.93 14.6858 1.55583 13.395 1.80667C12.66 0.716667 11.4142 0 10.0008 0C8.5875 0 7.34167 0.716667 6.60667 1.80667C5.31667 1.55583 3.92833 1.93 2.92917 2.92917C1.93 3.92833 1.55583 5.31583 1.80667 6.60667C0.716667 7.34167 0 8.5875 0 10.0008C0 11.4142 0.716667 12.66 1.80667 13.395C1.55583 14.685 1.93 16.0733 2.92917 17.0725C3.92833 18.0717 5.31583 18.4458 6.60667 18.195C7.34167 19.285 8.5875 20.0017 10.0008 20.0017C11.4142 20.0017 12.66 19.285 13.395 18.195C14.685 18.4458 16.0733 18.0717 17.0725 17.0725C18.0717 16.0733 18.4458 14.6858 18.195 13.395C19.285 12.66 20.0017 11.4142 20.0017 10.0008ZM9.92583 12.85C9.60333 13.1725 9.17917 13.3333 8.75333 13.3333C8.3275 13.3333 7.89917 13.1708 7.57333 12.8458L5.85391 11.1796C5.52316 10.859 5.51491 10.3311 5.83549 10.0003C6.15601 9.6697 6.68389 9.66147 7.01456 9.98196L8.42556 11.3495C8.60233 11.5208 8.88348 11.52 9.05918 11.3475L12.9899 7.48989C13.3183 7.1676 13.8456 7.17203 14.1686 7.49979C14.492 7.82804 14.488 8.35633 14.1597 8.6797L9.92583 12.85Z"
-            fill="#02A1A4" />
-        </svg>
-        <span>SOC 2 Type II</span>
-      </div>
-      <div class="badge">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
-          class="badge-icon">
-          <path
-            d="M20.0017 10.0008C20.0017 8.5875 19.285 7.34167 18.195 6.60667C18.4458 5.31667 18.0717 3.92917 17.0725 2.92917C16.0733 1.93 14.6858 1.55583 13.395 1.80667C12.66 0.716667 11.4142 0 10.0008 0C8.5875 0 7.34167 0.716667 6.60667 1.80667C5.31667 1.55583 3.92833 1.93 2.92917 2.92917C1.93 3.92833 1.55583 5.31583 1.80667 6.60667C0.716667 7.34167 0 8.5875 0 10.0008C0 11.4142 0.716667 12.66 1.80667 13.395C1.55583 14.685 1.93 16.0733 2.92917 17.0725C3.92833 18.0717 5.31583 18.4458 6.60667 18.195C7.34167 19.285 8.5875 20.0017 10.0008 20.0017C11.4142 20.0017 12.66 19.285 13.395 18.195C14.685 18.4458 16.0733 18.0717 17.0725 17.0725C18.0717 16.0733 18.4458 14.6858 18.195 13.395C19.285 12.66 20.0017 11.4142 20.0017 10.0008ZM9.92583 12.85C9.60333 13.1725 9.17917 13.3333 8.75333 13.3333C8.3275 13.3333 7.89917 13.1708 7.57333 12.8458L5.85391 11.1796C5.52316 10.859 5.51491 10.3311 5.83549 10.0003C6.15601 9.6697 6.68389 9.66147 7.01456 9.98196L8.42556 11.3495C8.60233 11.5208 8.88348 11.52 9.05918 11.3475L12.9899 7.48989C13.3183 7.1676 13.8456 7.17203 14.1686 7.49979C14.492 7.82804 14.488 8.35633 14.1597 8.6797L9.92583 12.85Z"
-            fill="#02A1A4" />
-        </svg>
-        <span>FHIR R4 Native</span>
-      </div>
-      <div class="badge">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
-          class="badge-icon">
-          <path
-            d="M20.0017 10.0008C20.0017 8.5875 19.285 7.34167 18.195 6.60667C18.4458 5.31667 18.0717 3.92917 17.0725 2.92917C16.0733 1.93 14.6858 1.55583 13.395 1.80667C12.66 0.716667 11.4142 0 10.0008 0C8.5875 0 7.34167 0.716667 6.60667 1.80667C5.31667 1.55583 3.92833 1.93 2.92917 2.92917C1.93 3.92833 1.55583 5.31583 1.80667 6.60667C0.716667 7.34167 0 8.5875 0 10.0008C0 11.4142 0.716667 12.66 1.80667 13.395C1.55583 14.685 1.93 16.0733 2.92917 17.0725C3.92833 18.0717 5.31583 18.4458 6.60667 18.195C7.34167 19.285 8.5875 20.0017 10.0008 20.0017C11.4142 20.0017 12.66 19.285 13.395 18.195C14.685 18.4458 16.0733 18.0717 17.0725 17.0725C18.0717 16.0733 18.4458 14.6858 18.195 13.395C19.285 12.66 20.0017 11.4142 20.0017 10.0008ZM9.92583 12.85C9.60333 13.1725 9.17917 13.3333 8.75333 13.3333C8.3275 13.3333 7.89917 13.1708 7.57333 12.8458L5.85391 11.1796C5.52316 10.859 5.51491 10.3311 5.83549 10.0003C6.15601 9.6697 6.68389 9.66147 7.01456 9.98196L8.42556 11.3495C8.60233 11.5208 8.88348 11.52 9.05918 11.3475L12.9899 7.48989C13.3183 7.1676 13.8456 7.17203 14.1686 7.49979C14.492 7.82804 14.488 8.35633 14.1597 8.6797L9.92583 12.85Z"
-            fill="#02A1A4" />
-        </svg>
-        <span>FDA Ready</span>
-      </div>
-    </div>
-  </main>
-
-  <!-- Whitepaper Section -->
-  <!-- <section class="whitepaper-section">
-    <div class="whitepaper-content">
-      <span class="whitepaper-badge">FREE WHITEPAPER</span>
-      <h2 class="whitepaper-headline">
-        The Healthcare AI Executive's<br>
-        Guide to Synthetic Data
-      </h2>
-      <p class="whitepaper-subhead">
-        Learn how leading health systems are accelerating AI development while ensuring patient privacy and regulatory
-        compliance.
-      </p>
-      <form class="whitepaper-form" id="whitepaper-form">
-        <input type="email" class="whitepaper-input" placeholder="Work email" id="whitepaper-email" required>
-        <button type="submit" class="btn btn-primary btn-whitepaper" id="whitepaper-submit-btn">
-          <span class="btn-text">Download Whitepaper</span>
-          <span class="btn-spinner"></span>
-          <svg class="btn-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
-            <polyline points="20 6 9 17 4 12"></polyline>
+          <svg viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd"
+              d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+              clip-rule="evenodd" />
           </svg>
         </button>
       </form>
-    </div>
-  </section> -->
 
-  <!-- Problem/Stats Section -->
-  <section class="stats-section">
-    <div class="stats-container">
-      <h2 class="section-headline light">The High Cost of Data Friction</h2>
+      <!-- Data Visualization -->
+      <div class="data-viz animate-on-scroll">
+        <img src="hero-graph.png" alt="Synthetix Differential Privacy Graph"
+          style="width: 100%; height: auto; border-radius: 12px;">
+      </div>
 
-      <div class="stats-grid">
-        <div class="stat-card">
-          <div class="stat-number">$360B</div>
-          <div class="stat-label">Unrealized annual savings</div>
+      <!-- Trust Badges -->
+      <div class="trust-badges">
+        <div class="badge animate-on-scroll">
+          <svg class="badge-icon" viewBox="0 0 20 20" fill="currentColor">
+            <path
+              d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0zm4.293 7.707l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 111.414-1.414L8.5 10.586l4.293-4.293a1 1 0 111.414 1.414z" />
+          </svg>
+          <span>HIPAA Compliant</span>
         </div>
-        <div class="stat-card">
-          <div class="stat-number">18 mo</div>
-          <div class="stat-label">Avg. data sharing delay</div>
+        <div class="badge animate-on-scroll">
+          <svg class="badge-icon" viewBox="0 0 20 20" fill="currentColor">
+            <path
+              d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0zm4.293 7.707l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 111.414-1.414L8.5 10.586l4.293-4.293a1 1 0 111.414 1.414z" />
+          </svg>
+          <span>SOC 2 Type II</span>
         </div>
-        <div class="stat-card">
-          <div class="stat-number">60%</div>
-          <div class="stat-label">AI projects fail due to data access</div>
+        <div class="badge animate-on-scroll">
+          <svg class="badge-icon" viewBox="0 0 20 20" fill="currentColor">
+            <path
+              d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0zm4.293 7.707l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 111.414-1.414L8.5 10.586l4.293-4.293a1 1 0 111.414 1.414z" />
+          </svg>
+          <span>FHIR R4 Native</span>
+        </div>
+        <div class="badge animate-on-scroll">
+          <svg class="badge-icon" viewBox="0 0 20 20" fill="currentColor">
+            <path
+              d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0zm4.293 7.707l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 111.414-1.414L8.5 10.586l4.293-4.293a1 1 0 111.414 1.414z" />
+          </svg>
+          <span>FDA Ready</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Solution/How It Works Section -->
+  <!-- Stats Section -->
+  <section class="stats-section">
+    <div class="stats-bg"></div>
+    <div class="container">
+      <h2 class="section-title section-title-light animate-on-scroll">The High Cost of Data Friction</h2>
+      <div class="stats-grid">
+        <div class="stat-card animate-on-scroll">
+          <span class="stat-context">Healthcare industry loses</span>
+          <div class="stat-number" data-target="360" data-prefix="$" data-suffix="B">$0B</div>
+          <p class="stat-label">Unrealized annual savings from data silos</p>
+        </div>
+        <div class="stat-card animate-on-scroll">
+          <span class="stat-context">Average time to share data</span>
+          <div class="stat-number" data-target="18" data-suffix=" mo">0 mo</div>
+          <p class="stat-label">Delay for institutional data sharing</p>
+        </div>
+        <div class="stat-card animate-on-scroll">
+          <span class="stat-context">Critical failure rate</span>
+          <div class="stat-number" data-target="60" data-suffix="%">0%</div>
+          <p class="stat-label">AI projects fail due to data access issues</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solution Section -->
   <section class="solution-section">
-    <div class="solution-container">
-      <h2 class="section-headline">Engineered for Enterprise Healthcare</h2>
-
-      <div class="solution-steps">
-        <div class="step-card">
+    <div class="container">
+      <h2 class="section-title animate-on-scroll">Engineered for Enterprise Healthcare</h2>
+      <div class="timeline">
+        <div class="timeline-line"></div>
+        <div class="timeline-step animate-on-scroll">
+          <div class="step-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
           <div class="step-number">01</div>
-          <div class="step-content">
-            <h3 class="step-title">Accelerate AI without privacy risk</h3>
-            <p class="step-text">Deploy machine learning models faster with synthetic data that maintains statistical
-              accuracy while ensuring mathematical privacy guarantees.</p>
-          </div>
+          <h3 class="step-title">Accelerate AI without privacy risk</h3>
+          <p class="step-text">Deploy ML models faster with synthetic data that maintains statistical accuracy while
+            ensuring mathematical privacy guarantees.</p>
         </div>
-
-        <div class="step-card">
+        <div class="timeline-step animate-on-scroll">
+          <div class="step-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+            </svg>
+          </div>
           <div class="step-number">02</div>
-          <div class="step-content">
-            <h3 class="step-title">Enable collaboration at scale</h3>
-            <p class="step-text">Share data across departments, with research partners, and vendors—without exposing
-              real patient information or triggering compliance reviews.</p>
+          <h3 class="step-title">Enable collaboration at scale</h3>
+          <p class="step-text">Share data across departments and with vendors—without exposing patient information or
+            triggering compliance reviews.</p>
+        </div>
+        <div class="timeline-step animate-on-scroll">
+          <div class="step-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              <path d="M9 12l2 2 4-4" />
+            </svg>
+          </div>
+          <div class="step-number">03</div>
+          <h3 class="step-title">Meet regulatory requirements</h3>
+          <p class="step-text">Built for healthcare compliance from day one. HIPAA-aligned with audit-ready
+            documentation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison Table Section -->
+  <section class="comparison-section">
+    <div class="container">
+      <h2 class="section-title animate-on-scroll">Why Differential Privacy Wins</h2>
+      <p class="section-subtitle animate-on-scroll">Not all privacy approaches are created equal</p>
+
+      <div class="comparison-table animate-on-scroll">
+        <div class="comparison-header">
+          <div class="comparison-cell">Approach</div>
+          <div class="comparison-cell">Privacy Guarantee</div>
+          <div class="comparison-cell">Risk Level</div>
+        </div>
+        <div class="comparison-row">
+          <div class="comparison-cell">
+            <span class="approach-name">Data Masking</span>
+          </div>
+          <div class="comparison-cell">
+            <span class="guarantee-weak">"Pretty safe"</span>
+          </div>
+          <div class="comparison-cell">
+            <span class="risk-high">
+              <svg viewBox="0 0 20 20" fill="currentColor" class="icon-x">
+                <path fill-rule="evenodd"
+                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                  clip-rule="evenodd" />
+              </svg>
+              Reversible
+            </span>
           </div>
         </div>
-
-        <div class="step-card">
-          <div class="step-number">03</div>
-          <div class="step-content">
-            <h3 class="step-title">Meet regulatory requirements</h3>
-            <p class="step-text">Built for healthcare compliance from day one. HIPAA-aligned with audit-ready
-              documentation that satisfies the most stringent security requirements.</p>
+        <div class="comparison-row">
+          <div class="comparison-cell">
+            <span class="approach-name">De-identification</span>
+          </div>
+          <div class="comparison-cell">
+            <span class="guarantee-weak">Uncertain</span>
+          </div>
+          <div class="comparison-cell">
+            <span class="risk-high">
+              <svg viewBox="0 0 20 20" fill="currentColor" class="icon-x">
+                <path fill-rule="evenodd"
+                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                  clip-rule="evenodd" />
+              </svg>
+              Linkage attacks
+            </span>
+          </div>
+        </div>
+        <div class="comparison-row comparison-row-highlight">
+          <div class="comparison-cell">
+            <span class="approach-name approach-highlight">Differential Privacy</span>
+          </div>
+          <div class="comparison-cell">
+            <span class="guarantee-strong">Mathematical proof</span>
+          </div>
+          <div class="comparison-cell">
+            <span class="risk-low">
+              <svg viewBox="0 0 20 20" fill="currentColor" class="icon-check">
+                <path fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd" />
+              </svg>
+              Provably private
+            </span>
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Use Cases Section
+  <section class="usecases-section">
+    <div class="container">
+      <h2 class="section-title animate-on-scroll">Transformative Use Cases</h2>
+      <p class="section-subtitle animate-on-scroll">How leading health systems leverage synthetic data</p>
+
+      <div class="usecases-grid">
+        <div class="usecase-card animate-on-scroll">
+          <div class="usecase-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 2L2 7l10 5 10-5-10-5z" />
+              <path d="M2 17l10 5 10-5" />
+              <path d="M2 12l10 5 10-5" />
+            </svg>
+          </div>
+          <h3 class="usecase-title">Multi-Institutional Research</h3>
+          <p class="usecase-desc">Share data across institutions safely</p>
+          <div class="usecase-detail">
+            <p>Enable large-scale research collaborations without complex BAAs or data use agreements. Synthetic data
+              maintains research utility while eliminating re-identification risk.</p>
+          </div>
+        </div>
+
+        <div class="usecase-card animate-on-scroll">
+          <div class="usecase-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+              <line x1="8" y1="21" x2="16" y2="21" />
+              <line x1="12" y1="17" x2="12" y2="21" />
+            </svg>
+          </div>
+          <h3 class="usecase-title">Vendor Collaboration</h3>
+          <p class="usecase-desc">Accelerate vendor integrations</p>
+          <div class="usecase-detail">
+            <p>Provide realistic test data to technology vendors for development and QA without exposing protected
+              health information or requiring sandbox environments.</p>
+          </div>
+        </div>
+
+        <div class="usecase-card animate-on-scroll">
+          <div class="usecase-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 2a10 10 0 1 0 10 10H12V2z" />
+              <path d="M12 2a10 10 0 0 1 10 10" />
+              <circle cx="12" cy="12" r="6" />
+            </svg>
+          </div>
+          <h3 class="usecase-title">Clinical AI Training</h3>
+          <p class="usecase-desc">Build better models, faster</p>
+          <div class="usecase-detail">
+            <p>Train machine learning models on synthetic datasets that preserve statistical properties. Augment rare
+              condition data and balance training sets without privacy concerns.</p>
+          </div>
+        </div>
+
+        <div class="usecase-card animate-on-scroll">
+          <div class="usecase-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path
+                d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+            </svg>
+          </div>
+          <h3 class="usecase-title">Drug Discovery</h3>
+          <p class="usecase-desc">Accelerate pharmaceutical R&D</p>
+          <div class="usecase-detail">
+            <p>Enable pharma partners to access realistic patient cohort data for clinical trial design and drug
+              interaction modeling without data sharing barriers.</p>
+          </div>
+        </div>
+
+        <div class="usecase-card animate-on-scroll">
+          <div class="usecase-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path
+                d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+            </svg>
+          </div>
+          <h3 class="usecase-title">Medical Device Validation</h3>
+          <p class="usecase-desc">Test devices with realistic data</p>
+          <div class="usecase-detail">
+            <p>Validate medical devices and algorithms with representative patient populations. Meet FDA requirements
+              for device testing without patient consent complexities.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  -->
+
+  <!-- Whitepaper Preview Section -->
+  <section class="whitepaper-section">
+    <div class="container">
+      <div class="whitepaper-content">
+        <div class="whitepaper-info">
+          <span class="whitepaper-badge animate-on-scroll">FREE WHITEPAPER</span>
+          <h2 class="whitepaper-title animate-on-scroll">The Healthcare AI Executive's Guide to Synthetic Data</h2>
+          <ul class="whitepaper-list">
+            <li class="animate-on-scroll">
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd" />
+              </svg>
+              <span>How differential privacy mathematically guarantees protection</span>
+            </li>
+            <li class="animate-on-scroll">
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd" />
+              </svg>
+              <span>ROI analysis: Cost savings from accelerated data access</span>
+            </li>
+            <li class="animate-on-scroll">
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd" />
+              </svg>
+              <span>Implementation roadmap for enterprise health systems</span>
+            </li>
+            <li class="animate-on-scroll">
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd" />
+              </svg>
+              <span>Case studies from leading healthcare organizations</span>
+            </li>
+          </ul>
+          <div class="animate-on-scroll">
+            <button class="btn-primary"
+              onclick="document.getElementById('final-cta').scrollIntoView({ behavior: 'smooth' })">
+              <span class="btn-text">Download Now</span>
+              <span class="btn-spinner"></span>
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd"
+                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                  clip-rule="evenodd" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="whitepaper-preview animate-on-scroll">
+          <div class="pdf-mockup">
+            <div class="pdf-header">
+              <div class="pdf-logo">synthetix</div>
+              <span class="pdf-badge">WHITEPAPER</span>
+            </div>
+            <div class="pdf-title">The Healthcare AI Executive's Guide to Synthetic Data</div>
+            <div class="pdf-lines">
+              <div class="pdf-line"></div>
+              <div class="pdf-line"></div>
+              <div class="pdf-line pdf-line-short"></div>
+            </div>
+            <div class="pdf-chart">
+              <svg viewBox="0 0 100 50">
+                <path d="M0,40 Q25,35 40,25 T70,20 T100,30" stroke="currentColor" stroke-width="2" fill="none" />
+                <circle cx="40" cy="25" r="3" fill="currentColor" />
+                <circle cx="70" cy="20" r="3" fill="currentColor" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Credibility Section -->
+  <section class="credibility-section">
+    <div class="container">
+      <h2 class="section-title animate-on-scroll">Built on Proven Technology</h2>
+      <p class="section-subtitle animate-on-scroll">The same differential privacy framework trusted by the world's
+        leading organizations</p>
+
+      <div class="credibility-logos animate-on-scroll">
+        <!-- Logos removed as requested -->
+      </div>
+
+      <div class="credibility-badges animate-on-scroll">
+        <div class="cred-badge">
+          <div class="cred-badge-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
+          </div>
+          <div class="cred-badge-text">
+            <strong>HIPAA Compliant</strong>
+            <span>Privacy Rule Aligned</span>
+          </div>
+        </div>
+        <div class="cred-badge">
+          <div class="cred-badge-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M9 12l2 2 4-4" />
+              <circle cx="12" cy="12" r="10" />
+            </svg>
+          </div>
+          <div class="cred-badge-text">
+            <strong>SOC 2 Type II</strong>
+            <span>Audited Security</span>
+          </div>
+        </div>
+        <div class="cred-badge">
+          <div class="cred-badge-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M4 6h16M4 12h16M4 18h10" />
+            </svg>
+          </div>
+          <div class="cred-badge-text">
+            <strong>FHIR R4 Native</strong>
+            <span>Interoperability Ready</span>
+          </div>
+        </div>
+        <div class="cred-badge">
+          <div class="cred-badge-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path
+                d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+            </svg>
+          </div>
+          <div class="cred-badge-text">
+            <strong>FDA Ready</strong>
+            <span>Device Validation</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tech-features animate-on-scroll">
+        <div class="tech-feature">
+          <strong>ε-Differential Privacy</strong>
+          <p>Mathematically bounded privacy loss with tunable epsilon parameters</p>
+        </div>
+        <div class="tech-feature">
+          <strong>Statistical Fidelity</strong>
+          <p>Synthetic data preserves correlations, distributions, and research utility</p>
+        </div>
+        <div class="tech-feature">
+          <strong>Audit Trail</strong>
+          <p>Complete provenance tracking for compliance and governance</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA Section -->
+  <section class="final-cta-section" id="final-cta">
+    <div class="cta-bg"></div>
+    <div class="container">
+      <h2 class="cta-headline animate-on-scroll">Ready to Unlock Your<br>Healthcare Data?</h2>
+      <p class="cta-subtitle animate-on-scroll">Join healthcare leaders already using synthetic data</p>
+
+      <!-- Email Form 2 -->
+      <form class="email-form email-form-large animate-on-scroll" id="cta-form">
+        <div class="form-wrapper">
+          <input type="email" class="email-input" placeholder="Enter your work email" id="cta-email" required>
+          <span class="form-validation"></span>
+        </div>
+        <button type="submit" class="btn-primary" id="cta-submit">
+          <span class="btn-text">Get the Whitepaper</span>
+          <span class="btn-spinner"></span>
+          <svg class="btn-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+          <svg viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd"
+              d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+              clip-rule="evenodd" />
+          </svg>
+        </button>
+      </form>
+
+      <p class="cta-alt animate-on-scroll">
+        Or reach out directly: <a href="mailto:hello@synthetixdata.ai">hello@synthetixdata.ai</a>
+      </p>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
-    <div class="footer-container footer-simple">
+    <div class="container footer-container">
       <div class="footer-left">
-        <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;" class="logo">
-          <span class="logo-bold">synthetix</span>
-        </a>
-        <p class="copyright">&copy; 2026 Synthetix Data</p>
+        <a href="javascript:void(0)" class="footer-logo"
+          onclick="window.scrollTo({top: 0, behavior: 'smooth'})">synthetix</a>
+        <p class="footer-copyright">&copy; 2026 Synthetix Data</p>
       </div>
-
       <div class="footer-right">
-        <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;" class="footer-link">Download
-          Whitepaper</a>
         <a href="mailto:hello@synthetixdata.ai" class="footer-link">hello@synthetixdata.ai</a>
+        <a href="#" class="footer-link">Privacy Policy</a>
+        <a href="#" class="footer-link">Terms of Service</a>
       </div>
     </div>
   </footer>
