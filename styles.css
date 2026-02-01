@@ -131,7 +131,26 @@ body {
   border: none;
   border-radius: 100px;
   cursor: pointer;
-  transition: var(--transition-fast);
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-link {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-dark);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--color-primary);
 }
 
 .nav-cta:hover {
@@ -1146,10 +1165,26 @@ body {
 }
 
 .logo-item {
-  padding: 24px 48px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 32px;
   background: white;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
+}
+
+.logo-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.logo-icon {
+  width: 28px;
+  height: 28px;
+  color: var(--color-primary);
+  opacity: 0.8;
 }
 
 .logo-item span {
@@ -1551,6 +1586,15 @@ body {
   .nav-cta {
     padding: 8px 16px;
     font-size: 13px;
+  }
+
+  .nav-link {
+    display: none;
+    /* Hide secondary link on mobile for space */
+  }
+
+  .nav-actions {
+    gap: 12px;
   }
 
   .hero {
