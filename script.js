@@ -128,10 +128,10 @@ setupForm('hero-form', 'hero-email', 'hero-submit');
 setupForm('cta-form', 'cta-email', 'cta-submit');
 
 // ===== Navigation Visibility Logic =====
-const heroEmailInput = document.getElementById('hero-email');
+const heroCtaAnchor = document.getElementById('hero-cta-anchor');
 const nav = document.querySelector('.nav');
 
-if (heroEmailInput && nav) {
+if (heroCtaAnchor && nav) {
   const navObserverOptions = {
     root: null,
     threshold: 0,
@@ -140,8 +140,8 @@ if (heroEmailInput && nav) {
 
   const navObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      // If the email input is NOT intersecting (scrolled past or out of view)
-      // and we are below the top of the input, show the nav
+      // If the CTA buttons are NOT intersecting (scrolled past or out of view)
+      // and we are below the top of the buttons, show the nav
       if (!entry.isIntersecting && entry.boundingClientRect.top < 0) {
         nav.classList.add('nav-visible');
       } else {
@@ -150,7 +150,7 @@ if (heroEmailInput && nav) {
     });
   }, navObserverOptions);
 
-  navObserver.observe(heroEmailInput);
+  navObserver.observe(heroCtaAnchor);
 }
 
 window.addEventListener('scroll', () => {
